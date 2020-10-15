@@ -96,7 +96,7 @@ func main() {
 	})
 
 	http.HandleFunc("/zip", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println("/zip was called")
+
 		reqCity, ok := r.URL.Query()["city"]
 
 		// variables
