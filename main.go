@@ -112,6 +112,7 @@ func main() {
 		searchCity := strings.Trim(reqCity[0], "\"")
 
 		rows, err := db.Query("select zip, primaryCity, state, county, timezone, latitude, longitude, irsEstimatedPopulation2015 from zip_code_database where primaryCity like ? and type = 'STANDARD'", searchCity)
+
 		if err != nil {
 			log.Fatal(err)
 		}
